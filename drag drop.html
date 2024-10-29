@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Drag and Drop</title>
+</head>
+<body>
+<p>This webpage supports drag and drop</p>
+<div id="d" style="width:600px;height:600px;border:2px solid red; align-items: center;" ondragover="allowDrag(event)" ondrop="drop(event)"></div><br><br>
+<img src="C:\Users\a\Desktop\dog.jpg" id="i" draggable="true" ondragstart="drag(event)" height="450px" width="500px">
+<script>
+function allowDrag(ev)
+{
+ev.preventDefault();
+}
+function drag(ev)
+{
+ev.dataTransfer.setData("text/html",ev.target.id);
+}
+function drop(ev)
+{
+ev.preventDefault();
+var d1=ev.dataTransfer.getData("text/html");
+ev.target.appendChild(document.getElementById(d1));
+}
+</script>
+</body>
+</html>
