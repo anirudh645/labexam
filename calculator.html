@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Calculator</title>
+    </head>
+    <link rel="stylesheet" href="calculator.css"></link>
+    <body>
+        <div id="calc">
+            <div id="but">
+                <table>
+                    <tr>
+                        <td colspan="4"><div id="res"></div></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="append('(')">(</button></td>
+                        <td><button onclick="deleteLast()">CE</button></td>
+                        <td><button onclick="append(')')">)</button></td>
+                        <td><button onclick="empty()">C</button></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="append('1')">1</button></td>
+                        <td><button onclick="append('2')">2</button></td>
+                        <td><button onclick="append('3')">3</button></td>
+                        <td><button id="sym" onclick="append('+')">+</button></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="append('4')">4</button></td>
+                        <td><button onclick="append('5')">5</button></td>
+                        <td><button onclick="append('6')">6</button></td>
+                        <td><button id="sym" onclick="append('-')">-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="append('7')">7</button></td>
+                        <td><button onclick="append('8')">8</button></td>
+                        <td><button onclick="append('9')">9</button></td>
+                        <td><button id="sym" onclick="append('*')">x</button></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="append('.')">.</button></td>
+                        <td><button onclick="append('0')">0</button></td>
+                        <td><button id="eql" onclick="calculate()">=</button></td>
+                        <td><button id="sym" onclick="append('/')">/</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <script src="calculator.js"></script>
+    </body>
+</html>
